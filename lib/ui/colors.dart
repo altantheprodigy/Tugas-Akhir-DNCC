@@ -1,0 +1,24 @@
+import 'dart:ui';
+
+const Color background = Color(0xFFFFFFFF);
+const Color purple = Color(0xFF8E6BE8);
+const Color blue = Color(0xFF1F41BB);
+const Color dark = Color(0xFF000000);
+const Color dark25 = Color(0x40000000);
+const Color grey = Color(0xFFECECEC);
+const Color cardProduct = Color(0xFFEFEFEF);
+const Color pink = Color(0xFFFF78A8);
+const Color hijau = Color(0xFF03C10B);
+const Color textDark = Color(0xFF555555);
+const Color borderIconDark = Color(0xFF555555);
+const Color borderBlueDark = Color(0xFF3E5879);
+const Color borderGrey = Color(0xFFE6E6E6);
+const Color bgTxtSearch = Color(0xFFF5F5F5);
+const Color buttonInActive = Color(0xFFBEBEBE);
+const Color textWhite = Color(0xFFFFFFFF);
+const Color textBrown = Color(0xFFF2A65A);
+const Color textGray = Color(0xFF9C9C9C);
+const Color iconBrown = Color(0xFFF2A65A);
+const Color iconPurple = Color(0xFFA79EB7);
+const Color buttonFav = Color(0xFFFF8383);
+const Color buttonRed = Color(0xFFFF3D3D);
