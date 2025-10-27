@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ta_dncc/authentication/login_page.dart';
 import 'package:with_space_between/with_space_between.dart';
 
 import '../ui/colors.dart';
@@ -110,6 +111,25 @@ class ProfilePage extends StatelessWidget {
                       ),
                       reuseProfile('assets/icons/settings_icons.png', 'Settings'),
                       reuseProfile('assets/icons/faq_icons.png', 'Faq'),
+                      GestureDetector(
+                        onTap: (){
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => LoginPage()),
+                          );
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.only(top: 15, bottom: 15.0, right: 15, left: 30),
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text('Keluar', style: sRegular.copyWith(color: dark)),
+                              Icon(Icons.login_outlined, size: 20, color: buttonFav,),
+                            ],
+                          ),
+                        ),
+                      )
                     ],
                   ),
                 ),

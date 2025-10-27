@@ -27,7 +27,7 @@ class _RegisterPageState extends State<RegisterPage> {
   String? emailError;
   String? passwordError;
 
-  bool get isValidUsername => controllerUsername.text.trim().length >= 3;
+  bool get isValidUsername => controllerUsername.text.trim().length >= 5;
   bool get isValidEmail => RegExp(
     r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$",
   ).hasMatch(controllerEmail.text);
@@ -56,7 +56,7 @@ class _RegisterPageState extends State<RegisterPage> {
     setState(() {
       usernameError = isValidUsername
           ? null
-          : "Username must be at least 3 characters long";
+          : "Username must be at least 5 characters long";
       emailError = isValidEmail ? null : "Invalid email!";
       passwordError = isValidPassword
           ? null
@@ -143,12 +143,14 @@ class _RegisterPageState extends State<RegisterPage> {
                   isActive: isActive,
                   title: "Sign Up",
                   onTap: () {
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => NavigationScreen(),
-                      ),
-                    );
+                    isActive
+                        ? Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => NavigationScreen(),
+                            ),
+                          )
+                        : () {};
                   },
                 ),
 

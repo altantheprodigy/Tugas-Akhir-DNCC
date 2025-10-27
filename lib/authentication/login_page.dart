@@ -26,7 +26,7 @@ class _LoginPageState extends State<LoginPage> {
   bool get isValidPassword => controllerPassword.text.length >= 8;
   bool get isValidEmail => RegExp(
     r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$",
-  ).hasMatch(controllerEmail.text);
+  ).hasMatch(controllerEmail.text) || controllerEmail.text.length >= 5;
 
   @override
   void initState() {
@@ -46,7 +46,7 @@ class _LoginPageState extends State<LoginPage> {
 
   void _validateEmailPassword() {
     setState(() {
-      emailError = isValidEmail ? null : "Invalid email!";
+      emailError = isValidEmail ? null : "Invalid email or username!";
       passwordError = isValidPassword
           ? null
           : "Password must be at least 8 characters long";
@@ -117,12 +117,14 @@ class _LoginPageState extends State<LoginPage> {
                   isActive: isActive,
                   title: "Sign In",
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => NavigationScreen(),
-                      ),
-                    );
+                    isActive
+                        ? Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => NavigationScreen(),
+                            ),
+                          )
+                        : () {};
                   },
                 ),
                 CustomButton(
@@ -135,11 +137,6 @@ class _LoginPageState extends State<LoginPage> {
                     );
                   },
                 ),
-                Text(
-                  "Already have an account?",
-                  style: xsSemiBold.copyWith(color: textDark),
-                ),
-                const SizedBox(height: 10),
                 Text(
                   "Or continue with",
                   style: xsSemiBold.copyWith(color: blue),
