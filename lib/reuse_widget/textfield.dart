@@ -46,7 +46,7 @@ class myTextFieldState extends State<myTextField> {
       keyboardType: widget.keyboardType,
       maxLines: widget.maxLines ?? null,
       autofocus: false,
-      cursorColor: textBrown,
+      cursorColor: dark,
       style: TextStyle(
         color: textDark,
         fontSize: 12,
@@ -240,7 +240,7 @@ class myTextFieldPasswordState extends State<myTextFieldPassword> {
       keyboardType: widget.keyboardType,
       // maxLines: widget.maxLines ?? null,
       autofocus: false,
-      cursorColor: textBrown,
+      cursorColor: dark,
       style: TextStyle(
         color: textDark,
         fontSize: 12,

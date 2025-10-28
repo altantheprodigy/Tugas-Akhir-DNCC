@@ -71,11 +71,11 @@ class _LoginPageState extends State<LoginPage> {
                   children: [
                     Text(
                       "Login here",
-                      style: mSemiBold.copyWith(color: textDark),
+                      style: mBold.copyWith(color: dark),
                     ),
                     Text(
                       "Welcome back you've been missed",
-                      style: xsSemiBold.copyWith(color: textDark),
+                      style: xsSemiBold.copyWith(color: dark),
                       textAlign: TextAlign.center,
                     ),
                   ].withSpaceBetween(height: 20),

@@ -83,11 +83,11 @@ class _RegisterPageState extends State<RegisterPage> {
                   children: [
                     Text(
                       "Create Account",
-                      style: mSemiBold.copyWith(color: textDark),
+                      style: mBold.copyWith(color: dark),
                     ),
                     Text(
                       "Create an account so you can explore all the existing jobs",
-                      style: xsSemiBold.copyWith(color: textDark),
+                      style: xsSemiBold.copyWith(color: dark),
                       maxLines: 2,
                       textAlign: TextAlign.center,
                     ),
